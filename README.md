@@ -28,3 +28,6 @@ Disease Classification: The CNN model analyzes the image and provides a diagnosi
 https://www.kaggle.com/datasets/aryashah2k/mango-leaf-disease-dataset
 
 This repository contains all the necessary code and documentation to set up and run the web application, including instructions for training the CNN model, processing images, and  the Django-based web interface.
+
+https://github.com/ilham-hdrbch/MangoLeafDiseaseClassifier/assets/106122424/71b88fce-7a99-46ef-8e1b-521cf95fdedd
+
