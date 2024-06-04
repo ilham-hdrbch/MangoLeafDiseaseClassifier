@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection - Result</title>
+    <style>
+        body {
+            background-color: #8FBC8B; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .uploaded-image {
+            max-width: 50%; 
+        }
+
+        .text-box {
+            width: 45%; 
+            background-color: #ffffff; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            color: #8FBC8B; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <div class="container">
+        
+        <img src="{{ uploaded_file_url }}" alt="Uploaded Image" class="uploaded-image">
+        
+        
+        <div class="text-box">
+            <h1>Mango Leaf Disease Classifier</h1>
+            <p>Diagnosing plant health to help your garden thrive.</p>
+            <p>Prediction: {{ predicted_class }} with confidence {{ confidence }}%</p>
+            <a href="{% url 'form' %}">Upload another image</a>
+        </div>
+    </div>
+</body>
+</html>

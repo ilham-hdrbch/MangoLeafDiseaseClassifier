@@ -1,0 +1,50 @@
+/* Add background image to the body */
+body {
+    background-image: url('../images/back1.jpg'); /* Adjust the path to your image */
+    background-size: cover; /* Ensures the image covers the whole background */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers the container horizontally */
+    align-items: center; /* Centers the container vertically */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Style the container */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with transparency */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+    max-width: 500px; /* Limit the width */
+    margin: 20px;
+}
+
+/* Style the form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
